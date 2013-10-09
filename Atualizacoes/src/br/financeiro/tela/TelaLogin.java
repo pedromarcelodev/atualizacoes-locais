@@ -7,6 +7,7 @@ import javax.swing.JButton;
 import javax.swing.JComponent;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
@@ -108,8 +109,13 @@ public class TelaLogin extends JFrame implements ActionListener{
 	}
 
 	@Override
-	public void actionPerformed(ActionEvent arg0) {
-		
+	public void actionPerformed(ActionEvent e) {
+		if (e.getSource() == logar) {
+			String senha = String.valueOf(jpSenha.getPassword());
+			JOptionPane.showMessageDialog(null, senha);
+		}else if(e.getSource() == cancelar){
+			
+		}
 	}
 	
 	public static void main(String[] args) {
